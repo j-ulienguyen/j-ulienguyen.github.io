@@ -99,13 +99,9 @@ a.btn-black {
     }
 
 a.btn-white {
-    color: white !important;
+    color: white;
     border: 1px solid white;
 }
-
-    a.btn-white:link {
-        color: white !important;
-    }
 
     a.btn-white:hover {
         color: black;
