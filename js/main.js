@@ -19,8 +19,14 @@ function ImageModal(currentImage){
     modal = document.querySelector("#myModal");
     modalImage = document.querySelector("#modal-image");
 
-    ToggleModal("open");
-    modalImage.src = currentImage.src;
+    if(window.matchMedia("(max-width: 1280px)").matches){
+        // Disable function for mobile and tablet
+        ToggleModal("close");
+    } else {
+        // Enable function for desktop only
+        ToggleModal("open");
+        modalImage.src = currentImage.src;
+    }
 }
 
 function ToggleModal(status){
